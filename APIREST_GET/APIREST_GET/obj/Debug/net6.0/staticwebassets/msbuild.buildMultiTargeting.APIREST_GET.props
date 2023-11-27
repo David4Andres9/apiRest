@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\APIREST_GET.props" />
+</Project>
