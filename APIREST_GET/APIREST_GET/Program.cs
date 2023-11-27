@@ -13,13 +13,6 @@ builder.Services.AddDbContext<ARQUITECTURAContext>(opt => opt.UseSqlServer(build
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
-builder.Services.AddControllers().AddJsonOptions(opt =>
-{
-    opt.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-    opt.JsonSerializerOptions.IgnoreReadOnlyProperties = true;
-    opt.JsonSerializerOptions.WriteIndented = true;
-    opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-});
 builder.Services.AddControllers();
 var app = builder.Build();
 

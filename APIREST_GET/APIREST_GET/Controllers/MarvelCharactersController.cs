@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using APIREST_GET.Models;
 using Newtonsoft.Json;
 using System.Net;
+using Microsoft.Data.SqlClient;
 
 namespace APIREST_GET.Controllers
 {
@@ -44,16 +45,12 @@ namespace APIREST_GET.Controllers
                 }
                 foreach (var character in marvelCharacters)
                 {
-                    int id = character.Id;
-                    string name=character.Name;
-                    string description = character.Description;
-                    string path = "" + character.Thumbnail.Path + "." + character.Thumbnail.Extension;
                     MarvelCharacter marvelPerson = new MarvelCharacter
                     {
-                        Id = id,
-                        Name = name,
-                        Description = description,
-                        Thumbnail = path,
+                        Id = character.Id,
+                        Name = character.Name,
+                        Description = character.Description,
+                        Thumbnail = "" + character.Thumbnail.Path + "." + character.Thumbnail.Extension,
                         ConsultNumber = consult + 1
                     };
                     var addInventry = _dbcontext.MarvelCharacters.Add(marvelPerson);
