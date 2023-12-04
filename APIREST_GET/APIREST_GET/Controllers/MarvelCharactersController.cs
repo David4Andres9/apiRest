@@ -25,7 +25,6 @@ namespace APIREST_GET.Controllers
         [Route("getMarvelCharacters")]
         public async Task<IActionResult> getMarvelCharacters()
         {
-            int consult = 0;
             string publicKey = "474492f3425dddb8557bd7b9ed068eb2";
             string privateKey = "d1155d2ccda761566628047b49dedb853cf583a8";
             string ts = "1";
@@ -50,8 +49,7 @@ namespace APIREST_GET.Controllers
                         Id = character.Id,
                         Name = character.Name,
                         Description = character.Description,
-                        Thumbnail = "" + character.Thumbnail.Path + "." + character.Thumbnail.Extension,
-                        ConsultNumber = consult + 1
+                        Thumbnail = "" + character.Thumbnail.Path + "." + character.Thumbnail.Extension
                     };
                     var addInventry = _dbcontext.MarvelCharacters.Add(marvelPerson);
                 }

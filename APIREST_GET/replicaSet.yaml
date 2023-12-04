@@ -1,0 +1,34 @@
+apiVersion: apps/v1 
+kind: ReplicaSet
+metadata:
+ name: marvel
+spec: 
+ replicas: 3
+ selector:
+   matchLabels:
+     app: marvel-pod
+ template:
+   metadata:
+     labels:
+       app: marvel-pod
+   spec:
+     containers:
+       - name: marvel
+         image: 9davidandres9/apimarvel:1.1.0
+         ports:
+           - containerPort: 80
+         env:
+           - name: ASPNETCORE_ENVIRONMENT
+             value: Development
+         readinessProbe:
+          httpGet:
+            path: /swagger
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 3
+         livenessProbe:
+          httpGet:
+            path: /swagger
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 3
