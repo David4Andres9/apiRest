@@ -1,6 +1,6 @@
 services:
   apiMarvel:
-    image: apimarvel:1.1.0
+    image: apimarvel:1.0.1
     ports:
       - "8082:80"
       - "8083:443"

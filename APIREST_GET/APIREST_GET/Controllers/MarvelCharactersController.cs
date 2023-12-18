@@ -61,7 +61,14 @@ namespace APIREST_GET.Controllers
             {
                 return StatusCode((int)HttpStatusCode.InternalServerError, ex);
             }
+        }
+        [HttpGet]
+        [Route("getAllCharacters")]
+        public async Task<IEnumerable<MarvelCharacter>> getAllCharacters()
+        {
+            var characters = await _dbcontext.MarvelCharacters.ToListAsync();
 
+            return characters;
         }
     }
 }

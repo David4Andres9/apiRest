@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIREST_GET", "APIREST_GET\APIREST_GET.csproj", "{6C38D20D-DB24-451B-8821-73BB7ED99BA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIREST_GET", "APIREST_GET\APIREST_GET.csproj", "{6C38D20D-DB24-451B-8821-73BB7ED99BA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TESTING", "TESTING\TESTING.csproj", "{C5266D8A-34FB-48BB-92B5-68DC08C5B56C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6C38D20D-DB24-451B-8821-73BB7ED99BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C38D20D-DB24-451B-8821-73BB7ED99BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C38D20D-DB24-451B-8821-73BB7ED99BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5266D8A-34FB-48BB-92B5-68DC08C5B56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5266D8A-34FB-48BB-92B5-68DC08C5B56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5266D8A-34FB-48BB-92B5-68DC08C5B56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5266D8A-34FB-48BB-92B5-68DC08C5B56C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
