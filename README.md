@@ -15,7 +15,7 @@ Proyecto en el que utiliza una API y guarda la información en una base de datos
 2. Clona el repositorio:
 
     ```bash
-    git clone https://github.com/tuusuario/tuproyecto.git
+    git clone https://github.com/David4Andres9/apiRest
     ```
 
 3. Restaura las dependencias:
