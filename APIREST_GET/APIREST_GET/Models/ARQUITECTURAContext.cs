@@ -13,6 +13,7 @@ namespace APIREST_GET.Models
         }
 
         public virtual DbSet<MarvelCharacter> MarvelCharacters { get; set; } = null!;
+        public virtual DbSet<User> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -42,6 +43,43 @@ namespace APIREST_GET.Models
                 entity.Property(e => e.Name).HasColumnName("name");
 
                 entity.Property(e => e.Thumbnail).HasColumnName("thumbnail");
+            });
+
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasKey(e => e.IdeUser)
+                    .HasName("PK__USERS__98FB428BBDFA2433");
+
+                entity.ToTable("USERS");
+
+                entity.Property(e => e.IdeUser)
+                    .HasColumnName("IDE_USER")
+                    .HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.LastName)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("LAST_NAME");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("NAME");
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("PASSWORD");
+
+                entity.Property(e => e.Rol)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("ROL");
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("USER_NAME");
             });
 
             OnModelCreatingPartial(modelBuilder);
