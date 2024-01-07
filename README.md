@@ -6,7 +6,7 @@ Proyecto en el que utiliza una API y guarda la información en una base de datos
 
 - ASP.NET Core 6
 - xUnit (para pruebas unitarias) -Proyecto agregado llamado TESTING
-  
+  Json Web Token
 
 ## Configuración del Proyecto
 
